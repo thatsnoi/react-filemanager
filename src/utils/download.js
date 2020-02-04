@@ -11,7 +11,7 @@ function promptToSaveBlob(_ref) {
     fetch(downloadUrl, {
       method: 'GET',
       headers: {
-        Authorization: localStorage.getItem('token')
+        Authorization: 'Bearer ' + localStorage.getItem('token')
       }
     }).then(response => {
       response.blob().then(blob => {
